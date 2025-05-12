@@ -1,0 +1,157 @@
+/* General Layout */
+.App {
+  text-align: center;
+  background-color: rgb(238, 234, 234); /* Light background for App */
+}
+
+/* Card Styling */
+.card-body {
+  background-color: white;
+  color: rgb(151, 17, 17); /* Text color for card */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for a lighter feel */
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.card-body:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.card-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* Footer Styling */
+.footer a:hover {
+  color: #0dcaf0 !important;
+  transition: color 0.3s ease;
+}
+
+/* Carousel Styling */
+.carousel-inner {
+  max-height: 500px; /* Max height for carousel */
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.carousel-item img,
+.carousel-item iframe {
+  object-fit: cover; /* Ensures images and iframe fill the space properly */
+}
+
+/* Product Image */
+.product_img {
+  object-fit: contain;
+  width: 100%;
+  height: 200px;
+}
+
+/* App Header */
+.App-header {
+  background-color: black;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-size: calc(10px + 2vmin);
+  color: rgb(45, 189, 26);
+}
+
+/* Theme Color Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f8f9fa;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+}
+
+/* Body Styling */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.card,
+.input-group,
+.form-select,
+.btn,
+.alert {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* Carousel Image Styling */
+.carousel-image {
+  max-width: 40%;  /* Adjust to your preferred width */
+  height: 30%;    /* Keep the aspect ratio intact */
+  margin: auto;    /* Center the image */
+}
+
+/* Link Styling */
+.App-link {
+  color: #61dafb;
+}
+
+/* Logo Spin Animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-inner {
+    max-height: 300px;
+  }
+
+  .product_img {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+
+  .product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+  .card-body {
+    padding: 8px;
+    margin: 8px;
+  }
+
+  .App-header {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}

@@ -1,0 +1,163 @@
+/* Base Styles */
+.chatbot-container {
+  position: relative;
+  max-width: 500px;
+  margin: 2rem auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+/* Dark/Light Mode */
+.chatbot-container.light {
+  background: #ffffff;
+  color: #333;
+}
+
+.chatbot-container.dark {
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.dark-mode {
+  background: #121212 !important;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(100, 200, 255, 0.7);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor.hovering {
+  background: rgba(255, 100, 200, 0.7);
+  transform: scale(1.5);
+}
+
+/* Header */
+.chatbot-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  text-align: center;
+}
+
+/* Messages */
+.chatbot-messages {
+  height: 400px;
+  padding: 1rem;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.message {
+  margin: 0.5rem 0;
+  padding: 0.8rem 1rem;
+  border-radius: 18px;
+  max-width: 80%;
+  line-height: 1.4;
+}
+
+.message.user {
+  margin-left: auto;
+  background: #6e8efb;
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+.message.bot {
+  margin-right: auto;
+  background: #f0f0f0;
+  color: #333;
+  border-bottom-left-radius: 5px;
+}
+
+.dark .message.bot {
+  background: #2d2d2d;
+  color: #f0f0f0;
+}
+
+/* Input Area */
+.chatbot-input {
+  display: flex;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.dark .chatbot-input {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  transition: border 0.3s ease;
+}
+
+.dark .chatbot-input input {
+  background: #2d2d2d;
+  border-color: #444;
+  color: white;
+}
+
+.chatbot-input button {
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: none;
+}
+
+/* Quick Questions */
+.quick-questions {
+  padding: 0 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.quick-questions p {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.quick-questions button {
+  padding: 0.5rem 0.8rem;
+  background: rgba(110, 142, 251, 0.1);
+  border: 1px solid #6e8efb;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: none;
+  transition: all 0.2s ease;
+}
+
+.dark .quick-questions button {
+  background: rgba(110, 142, 251, 0.2);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 0.6rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 20px;
+  color: inherit;
+  z-index: 10;
+  cursor: none;
+}
